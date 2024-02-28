@@ -4,25 +4,31 @@
 <head> 
 	<meta charset="UTF-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> 
+	<link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+	
 	<title>Result</title> 
 </head> 
 	
 <body> 
 	<div class="container"> 
-		<h2>Results</h2> 
+		<h2>Result</h2> 
 		<div> 
-			<strong>Original text:</strong> {{ original_text }} 
+			<strong>Original text:</strong>
+			<div class="c1">
+				{{ original_text }}
+			</div> 
+
 		</div> 
+		<br>
 		<div> 
-			<strong>Translated text:</strong> {{ translated_text }} 
+			<strong>Translated text:</strong>
+			<div class="c1">
+				{{ translated_text }}
+			</div>
 		</div> 
+
 		<div> 
-			<strong>Target language code:</strong> {{ target_language }} 
-		</div> 
-		<div> 
-			<a href="{{ url_for('index') }}">Try another one!</a> 
+			<a href="{{ url_for('index') }}" class="button-back">Back</a>
 		</div> 
 	</div> 
 </body> 

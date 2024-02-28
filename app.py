@@ -1,4 +1,4 @@
-# Importing the required libraries 
+# Import required libraries 
 import requests 
 import os 
 import uuid 
@@ -66,6 +66,6 @@ def index_post():
 		'results.html', 
 		translated_text=translated_text, 
 		original_text=original_text, 
-		target_language=target_language 
+		target_language=target_language
 	) 
 
